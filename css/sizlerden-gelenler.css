@@ -1,0 +1,14 @@
+/*sizlerden-gelenler.css*/
+button{
+    cursor: pointer;
+    padding: 12px 15px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+/*sizlerden-gelenler.css*/

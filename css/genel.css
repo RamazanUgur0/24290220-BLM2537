@@ -1,0 +1,227 @@
+/*genel.css*/
+* {
+    box-sizing: border-box;
+}
+
+:root{
+    --arkaplan: #c7c9cc;
+    --ust-menu: rgb(33,33,41);
+    --yazi: rgb(0, 0, 0);
+    --vurgu: #4b5fc4;
+    --vurgu-yazi: rgb(33,33,41);
+    --link: #2685b9;
+    --link-vurgu: #b1800f;
+}
+
+header a.vurgulu{
+    background-color: var(--vurgu);
+    color: var(--vurgu-yazi);
+}
+
+body {
+    color: var(--yazi);
+    line-height: 1.6;
+    margin: 0;
+    background-color: var(--arkaplan);
+}
+
+header {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 24px;
+    background-color: var(--ust-menu);
+}
+
+nav ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+div ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav a, div a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    border-radius: 6px;
+    padding: 10px 24px;
+}
+
+nav a:hover {
+    background-color: var(--vurgu);
+    color: var(--vurgu-yazi);
+}
+
+.vurgusuz-foto:hover {
+    scale: 1.25;
+}
+
+div:not(.vurgusuz-foto) a:hover {
+    background-color: var(--vurgu);
+    color: var(--vurgu-yazi);
+}
+
+.vurgusuz-foto {
+    padding: 0 !important;
+    background-color: transparent !important;
+    display: flex;
+}
+
+a {
+    color: var(--link);
+}
+
+a:hover {
+    color: var(--link-vurgu);
+}
+
+.paragraf:hover{
+    color: var(--vurgu-yazi);
+    width: fit-content;
+    background-color: var(--vurgu);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 97vh;
+}
+
+main {
+    flex: 1;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+main section, #geziFormu, #saatlikPlanFormu, #profilSekmesi {
+    background-color: #ffffff84;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+main h1, main h2 {
+    color: var(--yazi);
+    font-weight: 700;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--yazi);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+main input:not([type="time"], [type="checkbox"]), main select {
+    width: 100%;
+    height: 20px;
+    padding: 12px 15px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+main select {
+    height: 45px !important;
+}
+
+main textarea {
+    width: 100%;
+    height: 120px;
+    resize: none; /* Kullanıcının kutuyu yeniden boyutlandırmasını KESİN olarak engeller */
+    padding: 12px 15px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: inherit; /* Yazı tipinin siteyle aynı (standart tarayıcı fontu yerine) olmasını sağlar */
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.ortala{
+    display: flex;
+    justify-items: center;
+    margin: 0 auto;
+}
+
+input:focus, select:focus, main textarea:focus {
+    outline: none;
+    border: 2px solid var(--vurgu);
+    box-shadow: 0 0 5px rgba(75, 95, 196, 0.4);
+}
+
+footer{
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+.odak-sayfasi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------- Telefon ve Tablet Görünümü ---------- */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        flex-direction: column; 
+        padding: 20px 15px;
+        gap: 15px;
+    }
+
+    nav ul, #kullanici-islemleri ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        gap: 10px;
+    }
+
+    nav a, #kullanici-islemleri a {
+        text-align: center;
+        width: 100%;
+        padding: 12px;
+        box-sizing: border-box;
+    }
+
+    #kayit-ol, #giris-yap {
+        width: 90%; 
+        max-width: none; 
+        padding: 30px 20px; 
+        margin: 20px auto; 
+        box-sizing: border-box;
+    }
+
+    #kayit-ol input, #giris-yap input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .odak-sayfasi {
+
+        display: block; 
+        padding: 40px 15px; 
+    }
+}
+/*genel.css*/

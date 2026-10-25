@@ -1,0 +1,29 @@
+/*kayit.css*/
+#kayit-ol {
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #ffffff84;
+    background: linear-gradient(to bottom, #ffffff84, #ffffff00);
+    border-radius: 10px;
+}
+
+.kayitFormu input {
+    margin-bottom: 20px;
+    margin-top: 8px;
+    box-sizing: border-box;
+}
+
+button{
+    cursor: pointer;
+    padding: 12px 15px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+/*kayit.css*/
