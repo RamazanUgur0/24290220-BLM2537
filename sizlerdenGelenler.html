@@ -4,14 +4,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sizden Gelenler</title>
+        <title>Sizlerden Gelenler</title>
         <link rel="stylesheet" href="css/genel.css">
         <link rel="stylesheet" href="css/sizlerden-gelenler.css">
     </head>
     <body>
         <header>
             <div id="logo" class="vurgusuz-foto">
-                <a href="index.html"><img src="img/rotamTürkiye.png" alt="Rotam Türkiye logosu" height="80"></a>
+                <a href="index.html"><img src="img/rotamTurkiye.png" alt="Rotam Türkiye logosu" height="80"></a>
             </div>
 
             <nav>
@@ -59,13 +59,16 @@
                     <p>
                         <label for="sehir">Planını oluşturduğunuz şehir</label><br>
                         <select id="sehir" name="sehir">
+                            <option value="" disabled selected>Şehir seç</option>
+                            <option value="ankara">Ankara</option>
+                            <option value="istanbul">İstanbul</option>
+                            <option value="izmir">İzmir</option>
                             <option value="adana">Adana</option>
                             <option value="adiyaman">Adıyaman</option>
                             <option value="afyonkarahisar">Afyonkarahisar</option>
                             <option value="agri">Ağrı</option>
                             <option value="aksaray">Aksaray</option>
                             <option value="amasya">Amasya</option>
-                            <option value="ankara">Ankara</option>
                             <option value="antalya">Antalya</option>
                             <option value="ardahan">Ardahan</option>
                             <option value="artvin">Artvin</option>
@@ -98,8 +101,6 @@
                             <option value="hatay">Hatay</option>
                             <option value="igdir">Iğdır</option>
                             <option value="isparta">Isparta</option>
-                            <option value="istanbul">İstanbul</option>
-                            <option value="izmir">İzmir</option>
                             <option value="kahramanmaras">Kahramanmaraş</option>
                             <option value="karabuk">Karabük</option>
                             <option value="karaman">Karaman</option>
@@ -163,7 +164,6 @@
                 
                     <!-- Durak Ekle / Çıkar Butonları -->
                     <p>
-                        <hr>
                         <button type="button" id="btnDurakEkle">Yeni Durak Ekle</button>
                         <button type="button" id="btnDurakCikar">Son Durağı Çıkar</button>
                     </p>
@@ -180,6 +180,51 @@
             <section id="topluluk-planlari">
                 <h2>Gezginlerden Gelen Rotalar</h2>
                 <p>Topluluğumuzun oluşturduğu günlük planlardan ilham alın.</p>
+                <div class="kaydirilabilir">
+                    <table id="toplulukPlanlariTablosu" border="1">
+                        <caption>Örnek Ankara Gezisi Planı / Ankara</caption>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Durak Saati</th>
+                                <th>Etkinlik</th>
+                                <th>Etkinliğin Kategorisi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>09:00</td>
+                                <td>Anıtkabir Ziyareti</td>
+                                <td>Tarihi Yerler (Yapay Güzellikler)</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>11:00</td>
+                                <td>Kuğulu Park'ta Kahve Molası</td>
+                                <td>Doğal Güzellikler</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>14:00</td>
+                                <td>Hamamönü'nde Öğle Yemeği</td>
+                                <td>Yeme-İçme</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>17:00</td>
+                                <td>Atatürk Orman Çiftliği'nde Gezi</td>
+                                <td>Doğal Güzellikler</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>20:00</td>
+                                <td>Kızılay'da Akşam Yemeği ve Eğlence</td>
+                                <td>Eğlence ve Gece Hayatı</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </section>
         </main>
 

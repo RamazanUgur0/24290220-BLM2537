@@ -11,7 +11,7 @@
     <body>
         <header>
             <div id="logo" class="vurgusuz-foto">
-                <a href="index.html"><img src="img/rotamTürkiye.png" alt="Rotam Türkiye logosu" height="80"></a>
+                <a href="index.html"><img src="img/rotamTurkiye.png" alt="Rotam Türkiye logosu" height="80"></a>
             </div>
 
             <nav>
@@ -47,7 +47,59 @@
         </header>
 
         <main>
-            
+            <section id="profil-ozet">
+                <h2>Profilim</h2>
+                <p>
+                    <img src="img/pp.svg" alt="Profil Resmi" height="100">
+                </p>
+                <p>Ramazan Uğur Akgün<br>@ramazanugurakgun</p>
+                <p>Toplam 4 rota paylaştın.</p>
+                <p>Toplam 9 rota kaydettin.</p>
+                <p>Toplam 23 rota beğendin.</p>
+                <p>Manisa/Ankara</p>
+                <p>Favori Şehir: Ankara</p>
+                <p>En çok gitmek istediğin şehir: İstanbul</p>
+                <button type="button">Profilimi Düzenle</button>
+            </section>
+
+            <section id="kayitli-rotalar">
+                <h2>Kaydettiğim Rotalar</h2>
+                <p>Henüz kaydettiğiniz bir rota yok.</p>
+            </section>
+
+            <section id="paylasilan-rotalar">
+                <h2>Paylaştığım Rotalar</h2>
+                <p>Henüz paylaştığınız bir rota yok.</p>
+            </section>
+
+            <form id="profilSekmesi">
+                <h2>Hesap Bilgileri</h2>
+                <p>
+                    E-posta Adresiniz: rugurakgun@gmail.com
+                </p>
+                <button type="button">E-posta Adresini Değiştir</button>
+                <p>
+                    <label for="email">Yeni E-posta Adresi:</label><br>
+                    <input type="email" id="email" name="email" placeholder="ornek@gmail.com">
+                </p>
+                <button type="submit" class="dikkat">E-posta Adresini Güncelle</button><br>
+                <button type="button">Parolanızı sıfırlayın</button>
+                <p>
+                    <label for="mevcutSifre">Mevcut Şifre:</label><br>
+                    <input type="password" id="mevcutSifre" name="mevcutSifre" required>
+                </p>
+                <p>
+                    <label for="yeniSifre">Yeni Şifre:</label><br>
+                    <input type="password" id="yeniSifre" name="yeniSifre" minlength="8" required>
+                </p>
+                <p>
+                    <label for="yeniSifreTekrar">Yeni Şifreyi Onayla:</label><br>
+                    <input type="password" id="yeniSifreTekrar" name="yeniSifreTekrar" minlength="8" required>
+                </p>
+                <button type="submit" class="dikkat">Şifreyi Güncelle</button>
+            </form>
+
+            <button type="button" class="ortala dikkat">Çıkış Yap</button>
         </main>
 
         <footer>
