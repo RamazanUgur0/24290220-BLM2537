@@ -10,8 +10,15 @@
     --vurgu: #4b5fc4;
     --vurgu-yazi: rgb(33,33,41);
     --link: #2685b9;
-    --link-vurgu: #b1800f;
+    --link-vurgu: #575a5d;
     --dikkat: #ff0000;
+    --kart-background: #c8c6c67d;
+    --kart-vurgu-background: #c8c6c6;
+}
+
+html {
+    scroll-padding-top: 140px;
+    scroll-behavior: smooth;
 }
 
 header a.vurgulu{
@@ -42,11 +49,19 @@ header {
     z-index: 1000;
 }
 
+#menu-anahtar {
+    position: absolute;
+    opacity: 0;
+}
+
+.menu-dugmesi {
+    display: none;
+}
+
 .kaydirilabilir {
     width: 100%;
     overflow-x: auto;
     margin: 20px 0;
-    -webkit-overflow-scrolling: touch;
 }
 
 .kaydirilabilir table {
@@ -77,11 +92,12 @@ nav a, div a{
 
 nav a:hover {
     background-color: var(--vurgu);
-    color: var(--vurgu-yazi);
+    color: var(--vurgu-yazi2);
 }
 
 .vurgusuz-foto:hover {
     scale: 1.25;
+    transition: 0.3s;
 }
 
 div:not(.vurgusuz-foto) a:hover {
@@ -119,13 +135,12 @@ main {
 }
 
 .dikkat:hover{
-    color: var(--vurgu);
+    color: var(--arkaplan);
     background-color: var(--dikkat);
-    border: 1px solid var(--dikkat) !important;
+    border: 1px solid var(--dikkat);
 }
 
 button{
-    cursor: pointer;
     padding: 12px 15px;
     margin-top: 8px;
     margin-bottom: 20px;
@@ -133,6 +148,37 @@ button{
     border-radius: 8px;
     font-family: inherit;
     font-size: 1rem;
+    transition: 0.3s;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: var(--kart-vurgu-background);
+}
+
+.kart-izgara {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+    list-style: none;
+}
+
+.link-bolme-karti {
+    display: block;
+    height: 100%;
+    background-color: var(--kart-background);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--yazi);
+}
+
+.link-bolme-karti:hover {
+    color: var(--vurgu-yazi);
+    background-color: var(--kart-vurgu-background);
+    transform: translateY(-5px);
     transition: 0.3s;
 }
 
@@ -249,9 +295,63 @@ footer{
     }
 
     header {
-        flex-direction: column; 
-        padding: 20px 15px;
-        gap: 15px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 15px;
+        gap: 0;
+        max-height: 100vh;
+        max-height: 100dvh;
+        overflow-y: auto;
+    }
+
+    #logo {
+        order: 1;
+    }
+
+    .menu-dugmesi {
+        order: 2;
+        display: block;
+        color: white;
+        border: 1px solid white;
+        border-radius: 6px;
+        padding: 10px 16px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .menu-dugmesi::before {
+        content: "☰ ";
+    }
+    
+    #menu-anahtar:checked + .menu-dugmesi::before {
+        content: "✕ ";
+    }
+    
+    #menu-anahtar:focus-visible {
+        outline: 2px solid var(--vurgu);
+        outline-offset: 2px;
+    }
+    
+    #kullanici-islemleri {
+        display: none;
+        flex-basis: 100%;
+    }
+    
+    nav {
+        display: none;
+        flex-basis: 100%;
+        order: 3;
+        margin-top: 12px;
+    }
+    
+    #kullanici-islemleri {
+        order: 4;
+    }
+    
+    #menu-anahtar:checked ~ nav, #menu-anahtar:checked ~ #kullanici-islemleri {
+        display: block;
     }
 
     nav ul, #kullanici-islemleri ul {

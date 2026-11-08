@@ -3,6 +3,47 @@ section {
     min-width: 600px;
 }
 
+#profil-ozet {
+    text-align: center;
+}
+
+.bolme-ust {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+}
+
+.bolme-kartlari {
+    background-color: var(--kart-background);
+    border-radius: 12px;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.bolme-kartlari:hover {
+    background-color: var(--kart-vurgu-background);
+    transform: translateY(-5px);
+    transition: transform 0.3s;
+}
+
+details {
+    border: 1px solid #01060c;
+    border-radius: 12px;
+}
+
+summary:hover {
+    color: var(--link-vurgu);
+    cursor: pointer;
+}
+
+.butonlastir {
+    border-radius: 12px;
+    padding: 20px 10px;
+}
+
 @media (max-width: 600px) {
     section {
         min-width: 200px !important;

@@ -11,6 +11,9 @@
     </head>
     <body>
         <header>
+            <input type="checkbox" id="menu-anahtar">
+            <label for="menu-anahtar" class="menu-dugmesi">Menü</label>
+
             <div id="logo" class="vurgusuz-foto">
                 <a href="index.html"><img src="img/rotamTurkiye.png" alt="Rotam Türkiye logosu" height="80"></a>
             </div>
@@ -48,10 +51,15 @@
         </header>
         
         <main>
-            <section id="ana-sayfa-hero">
+            <section>
                 <h2>Türkiye'yi kendi rotanla keşfet</h2>
                 <p>Sıradan gezileri unut, kendi maceranı saat saat yarat,<br>diğer gezginlerin rotalarından ilham al.</p>
-                <p>Keşfetmeye başla!    <a href="sehirler.html">Şehirleri Keşfet</a></p>
+                <ul class="bolme-ust">
+                    <li class="bolme-kartlari"><strong>81</strong><br>Şehir</li>
+                    <li class="bolme-kartlari"><strong>4</strong><br>Kategori</li>
+                    <li class="bolme-kartlari"><strong>1-3</strong><br>Günlük Plan</li>
+                </ul>
+                <p>Keşfetmeye başla!<a href="sehirler.html">Şehirleri Keşfet</a></p>
             </section>
 
             <section id="neden-biz">
@@ -72,6 +80,51 @@
                     </div>
                 </div>
             </section>
+
+            <section id="populer-sehirler">
+                <h2>Popüler Şehirler</h2>
+                <p>Rotanı oluşturmaya bu şehirlerden birinde başlayabilirsin.</p>
+
+                <ul class="kart-izgara">
+                    <li>
+                        <a href="sehirler.html" class="link-bolme-karti">
+                            <h3>İstanbul</h3>
+                            <p>İki kıtayı birleştiren tarih, boğaz ve lezzet şehri</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="sehirler.html" class="link-bolme-karti">
+                            <h3>Ankara</h3>
+                            <p>Anıtkabir'den Hamamönü'ne başkentin rotası</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="sehirler.html" class="link-bolme-karti">
+                            <h3>İzmir</h3>
+                            <p>Ege'nin sahili, çarşı ve <br>yeme-içme şehri</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="sehirler.html" class="link-bolme-karti">
+                            <h3>Antalya</h3>
+                            <p>Deniz, tarih ve doğa bir arada</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="sehirler.html" class="link-bolme-karti">
+                            <h3>Nevşehir</h3>
+                            <p>Kapadokya'nın peribacaları ve vadileri</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="sehirler.html" class="link-bolme-karti">
+                            <h3>Mardin</h3>
+                            <p>Taş mimarisiyle tarihi sokaklar</p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
         </main>
 
         <footer>
